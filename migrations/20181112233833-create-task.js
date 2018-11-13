@@ -26,6 +26,14 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      ContextId: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        refernces: {
+          model: 'Contexts',
+          key: 'id'
+        }
       }
     });
   },
